@@ -1,0 +1,26 @@
+{
+    "name": "smolky/umuwords",
+    "version": "1.0.0-dev", 
+    "description": "Playing with word2vec", 
+    "autoload": {
+        "psr-4": {
+            "CoreOGraphy\\": ["core/"],
+            "UMUWords\\": ["custom/"]
+        }
+    },
+    
+    "require": {
+        "php": ">=5.5.0",
+        "altorouter/altorouter": "1.1.0",
+        "pimple/pimple": "~3.0",
+        "symfony/debug": "3.*",
+        "philipp15b/php-i18n": "*",
+        "zendframework/zend-diactoros": "*",
+        "swiftmailer/swiftmailer": "5.4.6",
+        "twig/twig": "~1.0",
+        "symfony/process": "^4.1",
+        "symfony/finder": "^4.1",
+        "symfony/console": "^4.1",
+        "voku/stop-words": "^2.0"
+    }
+}

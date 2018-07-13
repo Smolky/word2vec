@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <main>
+
+        <!-- Title -->
+        <h1>UMU<span>Words</span></h1>
+
+        
+        <!-- Form -->
+        <form method="post">
+            
+            <!-- Hidden fields -->
+            <input type="hidden" name="action" value="submit" />
+            
+            
+            <label>Corpus
+                <select name="corpus">
+                    {% for corpus in corpora %}
+                    <option value="{{ corpus.getFilename }}">{{ corpus.getFilename }}</option>
+                    {% endfor %}
+                </select>
+            </label>
+            
+            <label>Word
+                <input type="text" name="word" value="Caballero" />
+            </label>
+            
+            <label class="custom-file-upload button large">
+                <input type="file" name="new-corpus" class="create-corpus-action" />
+                Create corpus
+            </label>
+
+            
+            <button type="submit" class="button large">
+                Send
+            </button>
+        
+        </form>
+        
+        
+        <!-- Result -->
+        Response
+        <div id="result"></div>
+    
+    </main>
+{% endblock %}

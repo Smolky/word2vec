@@ -1,0 +1,108 @@
+body {
+    font-family: Roboto, helvetica, arial, sans-serif;
+    
+    background: 
+        radial-gradient(black 3px, transparent 4px),
+        radial-gradient(black 3px, transparent 4px),
+        linear-gradient(#fff 4px, transparent 0),
+        linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+        linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+        #fff
+    ;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    
+}
+
+body, html {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.5;
+    padding: 1rem 0;    
+}
+
+main {
+    margin: 1rem 0 0 0;
+    background-color: #282828;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,.3);
+    color: #41ff00;
+    border: 1.25rem solid #f7f7f0;
+    border-radius: .75rem;
+}
+
+input[type="text"],
+select,
+textarea {
+    font-family: monospace;
+    color: #41ff00;
+    background-color: #000;
+}
+
+select:focus,
+input[type="text"]:focus,
+textarea:focus {
+    background-color: #000;
+}
+
+label {
+    color: inherit;
+}
+
+.loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    pointer-events: none;
+    background-color: rgba(0,0,0,.3);
+}
+
+body.loading-state {
+    pointer-events: none;
+}
+
+body.loading-state .loader {
+    display: block;
+}
+
+
+#result {
+    margin: 0 0 1rem 0;
+    padding: .75rem;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    max-height: 22rem;
+    background-color: #222;
+    color: white;
+    text-align: right;
+    max-width: 36rem;
+    line-height: 1.5;
+}
+
+#result > div {
+    line-height: 1;
+    border-bottom: 1px dotted #ccc;
+    padding: .5rem 0;
+    vertical-align: middle;
+}
+
+#result > div progress {
+    vertical-align: middle;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}

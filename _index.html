@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foundation for Sites</title>
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/app.css">
+        
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        
+    </head>
+    <body>
+    
+    <!-- Loading -->
+    <div class="loader"></div>
+    
+    
+    <div class="row">
+        <div class="columns small-12">
+            <main>
+                <h1>UMU<span>Words</span></h1>
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+    
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
