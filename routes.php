@@ -16,3 +16,11 @@ $router->map ('POST', '/create-corpus', function () {
     return new \UMUWords\CreateCorpus ();
 });
 
+$router->map ('POST', '/create-model-from-corpus', function () {
+    require __DIR__ . '/controllers/gui/CreateModelFromCorpus.php';
+    return new \UMUWords\CreateModelFromCorpus ();
+});
+
+
+
+

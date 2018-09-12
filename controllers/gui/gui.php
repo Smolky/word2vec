@@ -22,17 +22,23 @@ class GUI extends \CoreOGraphy\BaseController {
      */
     public function handleRequest () {
         
-        /** @var $finder Finder */
-        $finder = new Finder ();
+        /** @var $CorporaFinder Finder */
+        $CorporaFinder = new Finder ();
         
         
-        // Configure finder
-        $finder->files ()->in (CORPUS_URL);
+        /** @var $ModelFinder Finder */
+        $ModelFinder = new Finder ();
+        
+        
+        // Configure finders
+        $CorporaFinder->files ()->in (CORPUS_URL);
+        $ModelFinder->files ()->in (VECTOR_URL);
         
         
         /** @var $data Array */
         $data = [
-            'corpora' => $finder
+            'corpora' => $CorporaFinder,
+            'models'  => $ModelFinder
         ];
         
         

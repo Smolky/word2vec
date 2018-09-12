@@ -14,23 +14,65 @@
             <input type="hidden" name="action" value="submit" />
             
             
+            <h2>Models</h2>
+            <label class="custom-file-upload button large">
+                <input type="file" name="new-corpus" class="create-corpus-action" />
+                Create a corpus from a plain file
+            </label>
+            
+            
             <label>Corpus
                 <select name="corpus">
                     {% for corpus in corpora %}
                     <option value="{{ corpus.getFilename }}">{{ corpus.getFilename }}</option>
                     {% endfor %}
                 </select>
+            </label>            
+            
+            <label>Size
+                <input type="text" name="size" value="200" />
             </label>
+            
+            <label>Window
+                <input type="text" name="window_size" value="8" />
+            </label>
+
+            <label>Iterations
+                <input type="text" name="iterations" value="15" />
+            </label>   
+            
+            <button type="button" class="button large generate-model-action">
+                Generate model
+            </button>
+            
+            <button type="button" class="button large view-corpus-action">
+                View original corpus
+            </button>
+            
+            <button type="button" class="button large view-clean-corpus-action">
+                View clean corpus
+            </button>
+            
+            <label class="custom-file-upload button large">
+                <input type="file" name="new-model" class="create-model-action" />
+                Upload existing model
+            </label>            
+            
+
+            <hr />
+            <h2>Testing</h2>
+            
+            <label>Model
+                <select name="model">
+                    {% for model in models %}
+                    <option value="{{ model.getFilename }}">{{ model.getFilename }}</option>
+                    {% endfor %}
+                </select>
+            </label>            
             
             <label>Word
                 <input type="text" name="word" value="Caballero" />
             </label>
-            
-            <label class="custom-file-upload button large">
-                <input type="file" name="new-corpus" class="create-corpus-action" />
-                Create corpus
-            </label>
-
             
             <button type="submit" class="button large">
                 Send

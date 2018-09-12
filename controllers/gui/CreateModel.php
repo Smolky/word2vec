@@ -6,14 +6,14 @@ use \Zend\Diactoros\Response\JsonResponse;
 
 
 /**
- * CreateCorpus
+ * CreateModel
  *
- * This controller allows to create new corpus in the system
+ * This controller allows to create new model in the system
  * based on a file
  *
  * @package UMUWords
  */
-class CreateCorpus extends \CoreOGraphy\BaseController {
+class CreateModel extends \CoreOGraphy\BaseController {
     
     /**
      * handleRequest
@@ -39,7 +39,7 @@ class CreateCorpus extends \CoreOGraphy\BaseController {
         
         
         // Create the corpus
-        file_put_contents (CORPUS_URL . $filename, $content);
+        file_put_contents (CORPUS_PROCESSED_DIR . $filename, $content);
         
         
         // Return response
